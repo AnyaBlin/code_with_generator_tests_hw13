@@ -8,7 +8,7 @@ import org.aeonbits.owner.Config;
 })
 public interface ProjectConfig extends Config {
 
-   /* @DefaultValue("chrome")
+/*    @DefaultValue("chrome")
     String browserName();
 
     @DefaultValue("96.0")
