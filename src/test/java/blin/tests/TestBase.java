@@ -29,14 +29,15 @@ public class TestBase {
 
     public static ProjectConfig conf =
             ConfigFactory.create(ProjectConfig.class);
+
     @BeforeAll
     static void setup() {
 
         //ProjectConfig conf = ConfigFactory.create(ProjectConfig.class, System.getProperties());
-/*        Configuration.browser = conf.browserName();
+        Configuration.browser = conf.browserName();
         Configuration.browserVersion = conf.browserVersion();
-        Configuration.browserSize = conf.browserSize();*/
-        Configuration.remote = format("https://%s:%s@%s",  conf.login(),
+        Configuration.browserSize = conf.browserSize();
+        Configuration.remote = format("https://%s:%s@%s", conf.login(),
                 conf.password(), System.getProperty("remoteBrowser"));
 
 
@@ -44,9 +45,7 @@ public class TestBase {
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
-                SelenideLogger.addListener("Allure", new AllureSelenide());
-
-
+        SelenideLogger.addListener("Allure", new AllureSelenide());
 
     }
 

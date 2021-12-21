@@ -8,16 +8,17 @@ import org.aeonbits.owner.Config;
 })
 public interface ProjectConfig extends Config {
 
-/*    @DefaultValue("chrome")
+    @DefaultValue("chrome")
     String browserName();
 
     @DefaultValue("96.0")
     String browserVersion();
 
     @DefaultValue("1920x1080")
-    String browserSize(); */
+    String browserSize();
 
     String login();
+
     String password();
 
 }

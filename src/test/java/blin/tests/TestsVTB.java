@@ -48,7 +48,7 @@ public class TestsVTB extends TestBase {
     }
 
     @Test
-    @DisplayName("Открываем главную страницу ВТБ, заполняем конвертер валют, проверяем содержимое при нажатии кнопки `Найти отделение` ")
+    @DisplayName("Открываем главную страницу ВТБ, проверяем содержимое при нажатии кнопки `Найти отделение` ")
     public void openPaymentPageAndCheckedCurrencyRate() {
 
         step("Открываем главную страницу и переходим в `Платежи и Переводы`", () -> {
@@ -92,7 +92,7 @@ public class TestsVTB extends TestBase {
     @Test
     @DisplayName("Меняем язык на сайте и проверяем содержимое")
     public void changeLanguage() {
-        step("Выбираем английский язык", () -> {
+        step("Открываем главную страницу ВТБ и выбираем английский язык", () -> {
             open(URL);
             $(".location").scrollTo().find(By.linkText(checkedElement3)).click();
             step("Проверяем содержимое", () ->
