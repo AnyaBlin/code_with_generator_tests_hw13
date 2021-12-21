@@ -55,7 +55,7 @@ gradle clean test
 
 ### Список автотестов в Allure Report
 
-<a href="https://ibb.co/C2wMWnw"><img src="https://i.ibb.co/5F1n251/allure-Steps.jpg" alt="allure-Steps" border="0"></a>
+<a href="https://c.radikal.ru/c40/2112/d9/e6eb62018cbb.jpg"><img src="https://c.radikal.ru/c40/2112/d9/e6eb62018cbb.jpg" alt="e6eb62018cbb" border="0"></a>
 
 
 ### Видео о прохождении тестов
