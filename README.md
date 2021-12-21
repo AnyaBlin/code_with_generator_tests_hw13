@@ -64,5 +64,5 @@ gradle clean test
 
 ### Уведомления о прохождении автотестов в Telegram
 
-<a href="https://ibb.co/dkv4NbQ"><img src=https://i.ibb.co/3Sbmxf0/bot.jpg" alt="bot" border="0"></a>
+<a href="https://ibb.co/dkv4NbQ"><img src="https://i.ibb.co/3Sbmxf0/bot.jpg" alt="bot" border="0"></a>
 
