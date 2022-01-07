@@ -62,13 +62,6 @@ public class TestsVTB extends TestBase {
             $(".select-inputstyles__SelectInputInner-currency-converter__sc-exkbxt-1.bmsPyc").click();
             $$(".ScrollbarsCustom.trackYVisible").findBy(text("В офисе (безналично)")).click();
         });
-        /*step("Вводим сколько у меня есть", () -> {
-            $(".base-inputstyles__Input-currency-converter__sc-1h5el2c-4.jVzcqp").click();
-           // $$(".parametersstyles__Box-currency-converter__sc-8kybyp-0.cEtRpQ [type = 'text']").first().setValue("100");
-
-        });*/
-      /* step("Смотрим сумму, которую мы получим в $", () ->
-                $$(".tabs-liststyles__List-currency-converter__sc-1prjmij-1.kgChpy.li").find(text("€")).click());*/
         step("Нажимаем на кнопку `Найти отделение`", () ->
                 $$(".big-buttonstyles__Wrapper-currency-converter__sc-4w7jjq-5.jFzfnT").find(text("Найти отделение")).click());
         step("Проверяем, что страница содержит элемент" + checkedElement2, () ->

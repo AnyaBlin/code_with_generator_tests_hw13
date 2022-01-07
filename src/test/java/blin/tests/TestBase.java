@@ -45,9 +45,6 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
                 SelenideLogger.addListener("Allure", new AllureSelenide());
-
-
-
     }
 
     @AfterEach
