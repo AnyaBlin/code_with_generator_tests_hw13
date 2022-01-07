@@ -16,6 +16,8 @@ public interface ProjectConfig extends Config {
     @DefaultValue("1920x1080")
     String browserSize();
 
+    String videoStorage();
+
     String login();
     String password();
 
