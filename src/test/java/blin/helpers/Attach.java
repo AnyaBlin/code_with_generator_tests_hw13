@@ -47,7 +47,7 @@ public class Attach {
     }
 
     public static URL getVideoUrl(String sessionId) {
-        String baseVideoURL = Configuration.remote = format("https://%s", conf.remoteBrowser()) ;
+        String baseVideoURL = Configuration.remote = format("https://%s", conf.videoStorage()) ;
         String videoUrl = baseVideoURL + sessionId + ".mp4";
 
         try {
