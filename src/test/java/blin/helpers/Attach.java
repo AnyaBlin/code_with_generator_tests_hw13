@@ -1,5 +1,6 @@
 package blin.helpers;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
@@ -10,7 +11,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
+import static blin.tests.TestBase.conf;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static java.lang.String.format;
 import static org.openqa.selenium.logging.LogType.BROWSER;
 
 public class Attach {
@@ -44,7 +47,8 @@ public class Attach {
     }
 
     public static URL getVideoUrl(String sessionId) {
-        String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId + ".mp4";
+        String baseVideoURL = Configuration.remote = format("https://%s", conf.remoteBrowser()) ;
+        String videoUrl = baseVideoURL + sessionId + ".mp4";
 
         try {
             return new URL(videoUrl);
@@ -58,4 +62,3 @@ public class Attach {
         return ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
     }
 }
-

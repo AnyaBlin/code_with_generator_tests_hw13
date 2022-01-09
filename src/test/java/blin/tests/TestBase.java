@@ -1,6 +1,6 @@
 package blin.tests;
 
-import blin.config.ProjectConfig;
+import blin.confi.ProjectConfig;
 import blin.helpers.Attach;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -10,6 +10,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static java.lang.String.format;
 
 public class TestBase {
@@ -33,12 +34,11 @@ public class TestBase {
     @BeforeAll
     static void setup() {
 
-        //ProjectConfig conf = ConfigFactory.create(ProjectConfig.class, System.getProperties());
-        Configuration.browser = conf.browserName();
-        Configuration.browserVersion = conf.browserVersion();
-        Configuration.browserSize = conf.browserSize();
+//        Configuration.browser = conf.browserName();
+//        Configuration.browserVersion = conf.browserVersion();
+//        Configuration.browserSize = conf.browserSize();
         Configuration.remote = format("https://%s:%s@%s", conf.login(),
-                conf.password(), System.getProperty("remoteBrowser"));
+                conf.password(), conf.remoteBrowser());
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
