@@ -28,10 +28,10 @@ Java, Gradle, JUnit5, IntelliJ IDEA, Selenide, Jenkins, Allure TestOps, Jira, Gi
 
 * В remote.properties содержатся следующие параметры конфигурации, которые необходимо определить для запуска тестов удалённо:
 ------- 
-Первые 3 параметра являются адресом селеноида
-- login= user1
-- password= 1234
-- remoteBrowser= selenoid.autotests.cloud/wd/hub/
+Первые 2 параметра отвечают за URL селеноида
+
+- remoteBrowser= https://user1:1234@selenoid.autotests.cloud/wd/hub/
+- videoStorage= https://selenoid.autotests.cloud/video/
 -------
 Следующие 3 являются настройками браузера
 
