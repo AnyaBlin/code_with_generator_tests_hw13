@@ -18,7 +18,4 @@ public interface ProjectConfig extends Config {
 
     String remoteBrowser();
     String videoStorage();
-
-    String login();
-    String password();
 }
